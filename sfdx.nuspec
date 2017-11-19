@@ -6,6 +6,7 @@
     <title>Salesforce.com SFDX CLI</title>
     <authors>zcassels</authors>
     <projectUrl>https://github.com/zcassels/sfdx-chocolatey-installer</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/zcassels/sfdx-chocolatey-installer/a4937108/icon.png</iconUrl>
     <packageSourceUrl>https://github.com/zcassels/sfdx-chocolatey-installer</packageSourceUrl>
     <projectSourceUrl>https://developer.salesforce.com/tools/sfdxcli</projectSourceUrl>
     <tags>sfdx admin force.com force dx</tags>

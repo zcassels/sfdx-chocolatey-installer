@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop';
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
-  softwareName  = 'sfdx*'
+  softwareName  = 'Salesforce CLI*'
   fileType      = 'exe'
   silentArgs   = '/S'
   validExitCodes= @(0)

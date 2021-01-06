@@ -11,10 +11,10 @@ $packageArgs = @{
   fileType      = 'exe' 
   url           = $url
   url64bit      = $url64
-  softwareName  = 'sfdx*'
-  checksum      = 'e885c57e6a4025711a58fe834030004b9b70289116ad9f86063419b078cca60f'
+  softwareName  = 'Salesforce CLI*'
+  checksum      = '5539CC2B23CE2126E5563B8C1A3A258D0ED3F2BCFCC20A0AA587A3CA7CDF1A73'
   checksumType  = 'sha256'
-  checksum64    = '8fbe798e1ddb07f108e94b545d102ce5fcd5e4af64839a0c82f5f2fbea57e2c2'
+  checksum64    = '0956CE890A6672DB5444A48C1462F76CC7DC2459DDF42EB6EA50292F0238AF25'
   checksumType64= 'sha256'
   silentArgs   = '/S'
   validExitCodes= @(0)
@@ -22,9 +22,9 @@ $packageArgs = @{
 
 Install-ChocolateyPackage @packageArgs 
 
-$appPath = "$env:ProgramFiles\sfdx"
-$statementsToRun = "/C `"$appPath\bin\sfdx.exe`" update"
+$appPath = "$env:ProgramFiles\Salesforce CLI"
+$statementsToRun = "/C `"$appPath\bin\sfdx.cmd`" update"
 $cmdExitCodes = @(0)
-Start-ChocolateyProcessAsAdmin $statementsToRun cmd -validExitCodes $cmdExitCodes
+Start-ChocolateyProcessAsAdmin -Statements "$statementsToRun" -ExeToRun "cmd" -validExitCodes $cmdExitCodes
 
 Update-SessionEnvironment

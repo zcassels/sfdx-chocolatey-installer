@@ -22,7 +22,7 @@ $packageArgs = @{
 
 Install-ChocolateyPackage @packageArgs 
 
-$appPath = "$env:ProgramFiles\Salesforce CLI"
+$appPath = "$env:ProgramFiles\sfdx"
 $statementsToRun = "/C `"$appPath\bin\sfdx.cmd`" update"
 $cmdExitCodes = @(0)
 Start-ChocolateyProcessAsAdmin -Statements "$statementsToRun" -ExeToRun "cmd" -validExitCodes $cmdExitCodes
